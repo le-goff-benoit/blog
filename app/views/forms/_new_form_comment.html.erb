@@ -1,0 +1,17 @@
+<h3>Add a comment:</h3>
+<%= form_with(model: [ @article, @article.comments.build ], local: true, class:'form-group') do |form| %>
+  <div class="form-group">
+    <%= form.label :author %><br>
+    <%= form.text_field :author, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit class:'btn btn-primary' %>
+
+  </div>
+<% end %>

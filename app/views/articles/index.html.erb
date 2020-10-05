@@ -1,0 +1,27 @@
+<%= render "layouts/page_title" %>
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.id %></td>
+          <td><%= article.title %></td>
+          <td><%= link_to 'Show', article_path(article.id) %></td>
+          <td><%= link_to 'Edit', edit_article_path(article.id) %></td>
+          <td><%= link_to 'Delete', article_path(article.id),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
