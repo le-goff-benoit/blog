@@ -1,5 +1,8 @@
-<div class="col-md-4">
-  <h2><%= title %></h2>
-  <p><i><%= text %></i></p>
-  <p><%= link_to 'View details', article_path(id), class:'btn btn-secondary' %></p>
+<div class="card col-md-4" style="width: 18rem;">
+  <img src="https://loremflickr.com/320/240" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= title %></h5>
+    <p class="card-text"><i><%= text %></i></p>
+    <p><%= link_to 'View details', article_path(id), class:'btn btn-secondary' %></p>
+  </div>
 </div>

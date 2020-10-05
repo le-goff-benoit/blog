@@ -1,17 +1,23 @@
 <%= render "layouts/page_title" %>
 <div class="container">
   <div class="form-group mb-5">
-    <h2>Text</h2><br>
-    <%= @article.text %>
-    <div class="mt-2">
-      <%= render "layouts/back_home" %>
-      <%= render "layouts/destroy_article" %>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="https://loremflickr.com/320/240" class="img-fluid img-thumbnail">
+      </div>
+      <div class="col-md-9">
+        <%= @article.text %>
       </div>
   </div>
+  <div class="mt-5 mb-5">
+    <%= render "layouts/back_home" %>
+    <%= render "layouts/destroy_article" %>
+    </div>
   <% @article.comments.each do |comment| %>
   <h3><%= comment.author %></h3>
   <p><%= comment.body %></p>
   <% end %>
   <hr class="my-4">
   <%= render "forms/new_form_comment" %>
+</div>
 </div>
