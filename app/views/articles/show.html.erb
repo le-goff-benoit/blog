@@ -7,6 +7,7 @@
       </div>
       <div class="col-md-9">
         <%= @article.text %>
+        <p class='text-danger'><%= @article.created_at.to_formatted_s(:short)  %></p>
       </div>
   </div>
   <div class="mt-5 mb-5">
