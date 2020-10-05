@@ -11,9 +11,11 @@
     <% @articles.last(3).each do |article| %>
     <%= render partial:"layouts/card", locals: {
       title: article.title,
-      text: article.text[1,100],
+      text: article.text[0,100],
       id: article.id
     } %>
     <% end %>
     </div>
+    <%= link_to 'Show more...', articles_path, class:'btn btn-outline-primary mt-5 mb-5'%>
+
   </div>
