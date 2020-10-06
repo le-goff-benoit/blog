@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
      @user = User.new(user_params)
      @user.save
-     redirect_to @user
+     redirect_to @user, notice: 'Nouveau membre: ' + @user.name
   end
 
   def edit
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
 
       if @user.update(user_params)
-        redirect_to users_path
+        redirect_to users_path, notice: 'Membre modifié: ' + @user.name
       else
         render 'edit'
       end

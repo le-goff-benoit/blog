@@ -35,3 +35,11 @@
  padding: 15px;
  margin: auto;
  }
+
+ .alert {
+   position: fixed;
+   z-index: 99;
+   right: 10px;
+   top: 80px;
+   max-width: 750px;
+ }

@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   def create
      @article = Article.new(article_params)
      @article.save
-     redirect_to @article
+     redirect_to articles_path, notice: 'Nouvel article: ' + @article.title
   end
 
   def edit
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
       @article = Article.find(params[:id])
 
       if @article.update(article_params)
-        redirect_to @article
+        redirect_to articles_path, notice: 'Article modifié: ' + @article.title
       else
         render 'edit'
       end
