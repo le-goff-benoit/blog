@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def subscribe
     @title = "Formulaire d'inscription"
   end
+
+  def login
+    @title = "Espace membre"    
+  end
 end

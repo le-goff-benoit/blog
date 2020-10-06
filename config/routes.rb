@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   get 'home/index'
   get 'home/subscribe'
+  get 'home/login'
 
   resources :articles do
     resources :comments
   end
-  
+
   resources :users
 
   root 'home#index'
