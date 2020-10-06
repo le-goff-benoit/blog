@@ -14,9 +14,11 @@
     <%= render "layouts/back_home" %>
     <%= render "layouts/destroy_article" %>
     </div>
+    <hr class="my-4">
+    <h3>Commentaires</h3>
   <% @article.comments.each do |comment| %>
-  <h3><%= comment.author %></h3>
-  <p><%= comment.body %></p>
+  <h5><%= comment.author %></h5>
+  <p class='font-italic'><%= comment.body %></p>
   <% end %>
   <hr class="my-4">
   <%= render "forms/new_form_comment" %>

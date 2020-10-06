@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @title = 'Users'
+    @title = 'Membres'
     @users = User.all
   end
 
   def new
-    @title = 'Create a new user'
+    @title = 'Créer un nouveau membre'
   end
 
   def show

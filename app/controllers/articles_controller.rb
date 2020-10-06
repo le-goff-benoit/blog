@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   def index
     @search_term = params[:query]
     if !@search_term
-      @title = 'Articles'
+      @title = 'Actualités'
       @articles = Article.all
     else
       @title = 'Results for: ' + @search_term
@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @title = 'Create a new article'
+    @title = 'Créer un nouvel article de blog'
   end
 
   def show
