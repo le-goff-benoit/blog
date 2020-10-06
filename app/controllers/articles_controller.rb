@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
       @title = 'Actualités'
       @articles = Article.all
     else
-      @title = 'Results for: ' + @search_term
+      @title = 'Recherche avec le terme: ' + @search_term
       @articles = Article.where('title LIKE ?', "%#{@search_term}%").or(Article.where('text LIKE ?', "%#{@search_term}%"))
 
     end
