@@ -18,7 +18,7 @@
     <h3>Commentaires</h3>
   <% @article.comments.each do |comment| %>
   <h5><%= comment.author %></h5>
-  <p class='font-italic'><%= comment.body %></p>
+  <p class='font-italic text-muted'><%= comment.body %></p>
   <% end %>
   <hr class="my-4">
   <%= render "forms/new_form_comment" %>
