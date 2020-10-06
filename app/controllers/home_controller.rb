@@ -6,4 +6,8 @@ class HomeController < ApplicationController
 
     @articles = Article.all
   end
+
+  def subscribe
+    @title = "Formulaire d'inscription"
+  end
 end
