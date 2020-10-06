@@ -1,0 +1,17 @@
+<%= render "layouts/page_title" %>
+<div class="container">
+  <div class="form-group mb-5">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="http://placeimg.com/640/480/people" class="img-fluid img-thumbnail">
+      </div>
+      <div class="col-md-9">
+        <h3><%= @user.role %></h3>
+        <p class='text-danger'>Since: <%= @user.created_at.to_formatted_s(:short)  %></p>
+      </div>
+  </div>
+  <div class="mt-5 mb-5">
+    <%= render "layouts/back_home" %>
+    </div>
+</div>
+</div>
