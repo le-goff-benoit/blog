@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/subscribe'
   get 'home/login'
+  get 'home/update'
 
   resources :articles do
     resources :comments

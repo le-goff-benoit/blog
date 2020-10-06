@@ -19,6 +19,9 @@
         <%= link_to "Login", home_login_path, id: "login", class: "nav-link" %>
       </li>
     </ul>
+    <%= link_to home_update_path, class: 'nav-link text-danger' do %>
+        <%= fa_icon "bell 2x" %>
+    <% end %>
     <%= render "forms/search" %>
   </div>
 </nav>

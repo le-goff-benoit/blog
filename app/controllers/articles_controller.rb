@@ -28,6 +28,8 @@ class ArticlesController < ApplicationController
   def create
      @article = Article.new(article_params)
      @article.save
+     @update = Update.new('title': 'Nouvel article: ' + @article.title)
+     @update.save
      redirect_to articles_path, notice: 'Nouvel article: ' + @article.title
   end
 
@@ -40,6 +42,8 @@ class ArticlesController < ApplicationController
       @article = Article.find(params[:id])
 
       if @article.update(article_params)
+        @update = Update.new('title': 'Article modifié: ' + @article.title)
+        @update.save
         redirect_to articles_path, notice: 'Article modifié: ' + @article.title
       else
         render 'edit'

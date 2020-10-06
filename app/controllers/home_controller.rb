@@ -12,6 +12,11 @@ class HomeController < ApplicationController
   end
 
   def login
-    @title = "Espace membre"    
+    @title = "Espace membre"
+  end
+
+  def update
+    @title = "Notifications"
+    @updates = Update.all
   end
 end
